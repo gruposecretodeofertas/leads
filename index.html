@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Secreto de Ofertas - Economize Todos os Dias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { scroll-behavior: smooth; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #0f0f1a 60%, #0a0a0a 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            transition: transform 0.3s ease;
+        }
+        .cta-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+            50% { box-shadow: 0 0 0 20px rgba(34, 197, 94, 0); }
+        }
+        .urgent-blink {
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .counter-container {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+
+    <!-- NAVBAR SIMPLES -->
+    <nav class="w-full py-4 px-4 sm:px-8 flex items-center justify-center border-b border-gray-800/50">
+        <div class="flex items-center gap-2">
+            <i data-lucide="zap" class="w-5 h-5 text-green-400"></i>
+            <span class="text-sm font-semibold text-gray-300 tracking-wide">GRUPO SECRETO DE OFERTAS</span>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HEADLINE + HERO -->
+    <section class="w-full max-w-4xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-8 text-center">
+        <div class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-4 py-2 mb-6">
+            <i data-lucide="sparkles" class="w-4 h-4 text-green-400"></i>
+            <span class="text-xs sm:text-sm text-green-400 font-medium">ACESSO LIMITADO — GRUPO EXCLUSIVO</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-white via-green-200 to-white bg-clip-text text-transparent">
+            Entre no grupo secreto que está fazendo pessoas comuns economizarem todos os dias
+        </h1>
+
+        <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Sem esforço e sem perder tempo procurando ofertas.
+        </p>
+
+        <!-- CTA PRINCIPAL -->
+        <a href="https://urjzikyckegvjzuskahg.supabase.co/functions/v1/link-preview/0123" target="_blank" rel="noopener noreferrer"
+           class="cta-pulse inline-flex items-center gap-3 mt-8 px-8 py-4 bg-green-500 hover:bg-green-400 text-gray-900 font-bold text-lg rounded-full transition-all shadow-2xl shadow-green-500/30">
+            <i data-lucide="arrow-right-circle" class="w-6 h-6"></i>
+            ENTRAR AGORA NO GRUPO
+        </a>
+
+        <p class="text-sm text-gray-500 mt-4 flex items-center justify-center gap-1">
+            <i data-lucide="lock" class="w-3 h-3"></i> Link seguro • Sem instalação
+        </p>
+    </section>
+
+    <!-- SECTION 2: SUBHEAD -->
+    <section class="w-full max-w-3xl mx-auto px-4 sm:px-6 pb-10 text-center">
+        <div class="bg-gray-800/40 border border-gray-700/50 rounded-2xl p-6 sm:p-8">
+            <p class="text-base sm:text-lg text-gray-200 leading-relaxed">
+                Receba no seu <span class="text-green-400 font-semibold">WhatsApp</span> promoções reais, descontos agressivos e oportunidades que simplesmente <span class="text-yellow-400 font-semibold">não aparecem em sites comuns</span> — direto no seu celular, no momento certo.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TRANSIÇÃO / STORYTELLING -->
+    <section class="w-full max-w-3xl mx-auto px-4 sm:px-6 pb-12">
+        <div class="text-center space-y-3">
+            <p class="text-gray-400 italic text-lg">
+                Sabe aquela sensação de descobrir uma promoção boa…
+            </p>
+            <p class="text-red-400 font-semibold text-xl">
+                mas só depois que ela já acabou?
+            </p>
+            <p class="text-gray-400 italic text-lg">
+                Ou pior…
+            </p>
+            <p class="text-red-400 font-semibold text-xl">
+                Perder dinheiro pagando mais caro em algo que poderia ter comprado pela metade do preço?
+            </p>
+            <div class="pt-4">
+                <p class="text-green-400 font-bold text-xl sm:text-2xl">
+                    É exatamente isso que esse grupo evita.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: BENEFÍCIOS -->
+    <section class="w-full max-w-4xl mx-auto px-4 sm:px-6 pb-16">
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10 text-white">
+            Por que <span class="text-green-400">milhares</span> já entraram?
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Benefício 1 -->
+            <div class="card-hover bg-gray-800/50 border border-gray-700/40 rounded-2xl p-6 flex flex-col items-center text-center">
+                <div class="bg-green-500/15 p-3 rounded-full mb-4">
+                    <i data-lucide="calendar-check" class="w-7 h-7 text-green-400"></i>
+                </div>
+                <h3 class="font-bold text-white mb-2">Ofertas Novas Todo Dia</h3>
+                <p class="text-gray-400 text-sm">Você nunca mais fica por fora das melhores oportunidades.</p>
+            </div>
+
+            <!-- Benefício 2 -->
+            <div class="card-hover bg-gray-800/50 border border-gray-700/40 rounded-2xl p-6 flex flex-col items-center text-center">
+                <div class="bg-yellow-500/15 p-3 rounded-full mb-4">
+                    <i data-lucide="percent" class="w-7 h-7 text-yellow-400"></i>
+                </div>
+                <h3 class="font-bold text-white mb-2">Descontos de Até 70%</h3>
+                <p class="text-gray-400 text-sm">Economia real, não "falso desconto" de loja comum.</p>
+            </div>
+
+            <!-- Benefício 3 -->
+            <div class="card-hover bg-gray-800/50 border border-gray-700/40 rounded-2xl p-6 flex flex-col items-center text-center">
+                <div class="bg-blue-500/15 p-3 rounded-full mb-4">
+                    <i data-lucide="brain" class="w-7 h-7 text-blue-400"></i>
+                </div>
+                <h3 class="font-bold text-white mb-2">Curadoria Inteligente</h3>
+                <p class="text-gray-400 text-sm">Só entra o que realmente vale a pena — filtrado pra você.</p>
+            </div>
+
+            <!-- Benefício 4 -->
+            <div class="card-hover bg-gray-800/50 border border-gray-700/40 rounded-2xl p-6 flex flex-col items-center text-center">
+                <div class="bg-purple-500/15 p-3 rounded-full mb-4">
+                    <i data-lucide="bell-ring" class="w-7 h-7 text-purple-400"></i>
+                </div>
+                <h3 class="font-bold text-white mb-2">Alertas Imediatos</h3>
+                <p class="text-gray-400 text-sm">Chegou oportunidade, você vê na hora — antes de todo mundo.</p>
+            </div>
+
+            <!-- Benefício 5 -->
+            <div class="card-hover bg-gray-800/50 border border-gray-700/40 rounded-2xl p-6 flex flex-col items-center text-center sm:col-span-2 lg:col-span-1 lg:col-start-3">
+                <div class="bg-orange-500/15 p-3 rounded-full mb-4">
+                    <i data-lucide="clock" class="w-7 h-7 text-orange-400"></i>
+                </div>
+                <h3 class="font-bold text-white mb-2">Zero Perda de Tempo</h3>
+                <p class="text-gray-400 text-sm">O melhor já chega filtrado — sem garimpar, sem estresse.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CTA SECUNDÁRIO -->
+    <section class="w-full max-w-2xl mx-auto px-4 sm:px-6 pb-10 text-center">
+        <p class="text-gray-300 text-lg mb-4">
+            👉 Clique abaixo e entre agora no grupo
+        </p>
+        <a href="https://urjzikyckegvjzuskahg.supabase.co/functions/v1/link-preview/0123" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-400 text-gray-900 font-bold text-lg rounded-full transition-all shadow-xl shadow-green-500/25">
+            <i data-lucide="users" class="w-5 h-5"></i>
+            ENTRAR AGORA NO GRUPO
+        </a>
+    </section>
+
+    <!-- SECTION 6: QUEBRA DE OBJEÇÃO -->
+    <section class="w-full max-w-3xl mx-auto px-4 sm:px-6 pb-12">
+        <div class="bg-gray-800/30 border border-gray-700/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <div class="bg-green-500/10 p-3 rounded-full shrink-0">
+                <i data-lucide="check-circle" class="w-8 h-8 text-green-400"></i>
+            </div>
+            <div class="space-y-1">
+                <p class="text-white font-semibold text-lg">Você não precisa instalar nada.</p>
+                <p class="text-gray-300">Não precisa pagar nada. <span class="text-gray-400">E pode sair quando quiser.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: GATILHO DE URGÊNCIA -->
+    <section class="w-full max-w-3xl mx-auto px-4 sm:px-6 pb-12">
+        <div class="counter-container rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="w-full h-full bg-[radial-gradient(circle_at_50%_50%,_white_1px,_transparent_1px)] bg-[size:20px_20px]"></div>
+            </div>
+            <div class="relative z-10">
+                <div class="flex items-center justify-center gap-2 mb-3">
+                    <i data-lucide="alert-triangle" class="w-6 h-6 text-yellow-300 urgent-blink"></i>
+                    <span class="text-yellow-200 font-bold text-lg uppercase tracking-wider">Atenção</span>
+                </div>
+                <p class="text-white font-bold text-xl sm:text-2xl mb-3">
+                    Para manter a qualidade e evitar spam, o grupo tem <span class="underline decoration-yellow-300">limite de participantes</span>.
+                </p>
+                <p class="text-red-100 text-lg mb-4">
+                    Quando atinge o máximo, o acesso é fechado.
+                </p>
+                <div class="bg-black/30 rounded-xl py-3 px-6 inline-block">
+                    <p class="text-white font-extrabold text-lg">
+                        Se você está vendo essa página agora, <span class="text-green-300">ainda dá tempo</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: PROVA SOCIAL -->
+    <section class="w-full max-w-3xl mx-auto px-4 sm:px-6 pb-12">
+        <div class="bg-gray-800/40 border border-gray-700/50 rounded-2xl p-6 sm:p-8 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <i data-lucide="users" class="w-6 h-6 text-green-400"></i>
+                <span class="text-3xl sm:text-4xl font-extrabold text-green-400" id="counter">12.847</span>
+            </div>
+            <p class="text-white font-semibold text-lg mb-3">
+                Mais de <span class="text-green-400 font-bold">12 mil pessoas</span> já estão lá dentro, aproveitando ofertas todos os dias.
+            </p>
+            <div class="text-gray-300 space-y-1">
+                <p>Enquanto muita gente paga preço cheio…</p>
+                <p class="text-green-400 font-semibold text-xl">quem está no grupo paga menos.</p>
+                <p class="text-gray-400 mt-2">A diferença? <span class="text-white font-semibold">Informação no momento certo.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: FECHAMENTO -->
+    <section class="w-full max-w-3xl mx-auto px-4 sm:px-6 pb-10 text-center">
+        <div class="space-y-4">
+            <p class="text-gray-200 text-lg sm:text-xl leading-relaxed">
+                Você está literalmente a <span class="text-green-400 font-bold">um clique</span> de começar a economizar todos os dias.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 text-gray-400 text-sm">
+                <span class="bg-gray-800/60 px-4 py-2 rounded-full flex items-center gap-2">
+                    <i data-lucide="ban" class="w-4 h-4 text-red-400"></i> Sem complicação
+                </span>
+                <span class="bg-gray-800/60 px-4 py-2 rounded-full flex items-center gap-2">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-green-400"></i> Sem risco
+                </span>
+                <span class="bg-gray-800/60 px-4 py-2 rounded-full flex items-center gap-2">
+                    <i data-lucide="wallet" class="w-4 h-4 text-yellow-400"></i> Sem custo
+                </span>
+            </div>
+            <p class="text-white font-bold text-2xl sm:text-3xl mt-4">
+                Só oportunidade.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 10: CTA FINAL -->
+    <section class="w-full max-w-2xl mx-auto px-4 sm:px-6 pb-20 text-center">
+        <a href="https://urjzikyckegvjzuskahg.supabase.co/functions/v1/link-preview/0123" target="_blank" rel="noopener noreferrer"
+           class="cta-pulse inline-flex items-center gap-3 px-10 py-5 bg-green-500 hover:bg-green-400 text-gray-900 font-extrabold text-xl sm:text-2xl rounded-full transition-all shadow-2xl shadow-green-500/40">
+            <i data-lucide="zap" class="w-7 h-7"></i>
+            QUERO ENTRAR NO GRUPO AGORA
+        </a>
+        <p class="text-gray-500 text-sm mt-4 flex items-center justify-center gap-1">
+            <i data-lucide="lock" class="w-3 h-3"></i> Acesso 100% gratuito e seguro
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full border-t border-gray-800/50 py-6 text-center">
+        <p class="text-gray-600 text-xs">
+            © 2025 Grupo Secreto de Ofertas • Todos os direitos reservados
+        </p>
+    </footer>
+
+    <!-- LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        // Contador animado de prova social
+        const counterEl = document.getElementById('counter');
+        if (counterEl) {
+            const target = 12847;
+            const duration = 2500;
+            const startTime = performance.now();
+
+            function animateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(easeOut * target);
+                counterEl.textContent = current.toLocaleString('pt-BR');
+                if (progress < 1) {
+                    requestAnimationFrame(animateCounter);
+                } else {
+                    counterEl.textContent = target.toLocaleString('pt-BR');
+                }
+            }
+
+            // Inicia animação quando elemento estiver visível
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        requestAnimationFrame(animateCounter);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(counterEl);
+        }
+
+        // Efeito de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2047892119094519');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2047892119094519&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</body>
+</html>
